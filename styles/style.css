@@ -33,6 +33,7 @@ hr {
     display: flex;
     justify-content: space-around;
     color: #FFFFFF;
+    width: 100%;
     background-color: #562EFF;
 }
 
@@ -57,7 +58,8 @@ hr {
     align-items: center;
     list-style: none;
 }
-.item{
+
+.item {
     margin-right: 36px;
 }
 
@@ -143,17 +145,46 @@ hr {
     grid-column-gap: 24px;
 }
 
+.course {
+    width: 253px;
+    height: 269px;
+    background-color: white;
+    filter: drop-shadow(0px 5.34229px 13.3557px rgba(0, 0, 0, 0.05));
+    border-radius: 10px;
+    padding: 14px 14px 25px 12px;
+}
+
 .course .course-banner img {
-    width: 224px;
+    width: 240px;
     height: 105px;
 }
 
+.course-title {
+    font-weight: 500;
+    font-size: 20px;
+}
+.course-author{
+    color: #ED6B4F;
+}
 .course-info {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
+.ratings{
+    color: #A2A2A2;
+    margin-left: 10px;
+}
+.course-duration {
+    color: #FF4A60;
+    border-radius: 15px;
+    background-color: #FFE4E8;
+    padding: 5px;
+}
+.course-duration2{
+    color: #ED6B4F;
+    background-color: #FEE5DF;
+}
 .fa-star {
     font-size: 12px;
 }
@@ -174,12 +205,21 @@ hr {
 @media only screen and (max-width: 688px) {
     .container {
         width: 100%;
+        padding: 2px;
     }
-
+    .nav-container{
+        width: 100%;
+        flex-direction: column;
+    }
+    .course{
+        width: 90%;
+    }
     .players,
     .blogs,
     .courses {
         grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 20px;
+        padding: 20px;
     }
 
     .player,
@@ -194,14 +234,22 @@ hr {
 @media only screen and (min-width: 688px) and (max-width: 992px) {
     .container {
         width: 100%;
+        padding: 2px;
     }
-
+    .nav-container{
+        width: 100%;
+    }
     .blogs {
         grid-template-columns: repeat(1, 1fr);
+        padding: 20px;
     }
-
+    .course{
+        width: 80%;
+    }
     .players,
     .courses {
         grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 20px;
+        padding: 20px;
     }
 }
